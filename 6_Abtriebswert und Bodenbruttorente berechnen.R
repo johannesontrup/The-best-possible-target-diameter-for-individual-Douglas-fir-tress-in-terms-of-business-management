@@ -7,10 +7,10 @@ write_db <- TRUE
 
 channel2 <- dbConnect(RPostgres::Postgres(),
                       dbname = "2025_Masterarbeit_Ontrub_Douglasienzieldurchmesser",
-                      host = "134.76.17.104",
-                      user = "khusman1",
-                      port = "5432",
-                      password = "456")
+                      host = "",
+                      user = "",
+                      port = "",
+                      password = "")
 
 
 #____________________________________________________________________________________________________#
@@ -586,4 +586,5 @@ for (tabelle in tabellen_namen) {
     assign(paste0(tabelle, "_ZBaum"), df_ZBaum, envir = .GlobalEnv)
   }
 }
+
 dbWriteTable(channel2, "Df5_I.Ekl_z80_int1_nbestock_ZBaum", Df5_I.Ekl_z80_int1_nbestock_ZBaum, overwrite=TRUE)
