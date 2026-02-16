@@ -6,10 +6,10 @@ write_db <- TRUE
 
 channel2 <- dbConnect(RPostgres::Postgres(),
                      dbname = "2025_Masterarbeit_Ontrub_Douglasienzieldurchmesser",
-                     host = "134.76.17.104",
-                     user = "khusman1",
-                     port = "5432",
-                     password = "456")
+                     host = "",
+                     user = "",
+                     port = "",
+                     password = "")
 
 #1 Tabellen der BWI (csv-Dateien) in R laden
 #2 Spalte des Bundeslandes und Bestockungstyps an die Haupttabelle anfügen
@@ -39,6 +39,7 @@ Dgl_Baeume <- dat_b4_baeume %>% filter(Bl %in% 7)
 Dgl_Baeume<-dat_b4_baeume %>% filter (BestockTypFein %in%2300)
 
 Dgl_Baeume<-dat_b4_baeume %>% filter (Al_ba >=41, Al_ba <=60)
+
 
 
 
