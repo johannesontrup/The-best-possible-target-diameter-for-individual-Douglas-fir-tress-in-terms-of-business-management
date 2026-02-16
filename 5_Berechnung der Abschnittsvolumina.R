@@ -7,10 +7,10 @@ write_db <- TRUE
 
 channel2 <- dbConnect(RPostgres::Postgres(),
                       dbname = "2025_Masterarbeit_Ontrub_Douglasienzieldurchmesser",
-                      host = "134.76.17.104",
-                      user = "khusman1",
-                      port = "5432",
-                      password = "456")
+                      host = "",
+                      user = "",
+                      port = "",
+                      password = "")
 
 #1 Höhe, BHD und Volumen für Berechnung mittels r-Paket rBDAT umformen
 #2 Aushaltung (Berechnung des Volumens und Mittendurchmessers der Stammholzabschnitte) für mittlere
@@ -495,4 +495,5 @@ Df5_I.Ekl_z80_int1_nbestock$vol_1_gut <- mapply(function(D1, H, BDATArtNr) {
 }, Df5_I.Ekl_z80_int1_nbestock$D1, Df5_I.Ekl_z80_int1_nbestock$H, Df5_I.Ekl_z80_int1_nbestock$BDATArtNr)
 
 dbWriteTable(channel2, "Df5_I.Ekl_z80_int1_nbestock", Df5_I.Ekl_z80_int1_nbestock, overwrite=TRUE)
+
 
