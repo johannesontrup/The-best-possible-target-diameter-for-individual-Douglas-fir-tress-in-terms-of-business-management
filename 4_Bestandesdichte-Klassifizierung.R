@@ -7,10 +7,10 @@ write_db <- TRUE
 
 channel2 <- dbConnect(RPostgres::Postgres(),
                       dbname = "2025_Masterarbeit_Ontrub_Douglasienzieldurchmesser",
-                      host = "134.76.17.104",
-                      user = "khusman1",
-                      port = "5432",
-                      password = "456")
+                      host = "",
+                      user = "",
+                      port = "",
+                      password = "")
 
 #1 Laden der Tabellen für die Ausgangsvariante
 #2 Berechnung des Bestockungsgrades (BG)
@@ -109,3 +109,4 @@ Df5_I.Ekl_z80_int1_uebestock <- Df5_I.Ekl_z80_int1 %>%
 dbWriteTable(channel2, "Df5_I.Ekl_z80_int1_ubestock", Df5_I.Ekl_z80_int1_ubestock, overwrite = TRUE)
 dbWriteTable(channel2, "Df5_I.Ekl_z80_int1_nbestock", Df5_I.Ekl_z80_int1_nbestock, overwrite = TRUE)
 dbWriteTable(channel2, "Df5_I.Ekl_z80_int1_uebestock", Df5_I.Ekl_z80_int1_uebestock, overwrite = TRUE)
+
