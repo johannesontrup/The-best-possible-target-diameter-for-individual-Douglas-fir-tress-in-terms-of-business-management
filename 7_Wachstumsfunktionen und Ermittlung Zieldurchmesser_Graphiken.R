@@ -7,10 +7,10 @@ write_db <- TRUE
 
 channel2 <- dbConnect(RPostgres::Postgres(),
                       dbname = "2025_Masterarbeit_Ontrub_Douglasienzieldurchmesser",
-                      host = "134.76.17.104",
-                      user = "khusman1",
-                      port = "5432",
-                      password = "456")
+                      host = "",
+                      user = "",
+                      port = "",
+                      password = "")
 
 #1 Laden und Vorbereiten der Daten
 #2 Durchmesserwachstum und -zuwachs
@@ -2333,3 +2333,4 @@ combined_plot<- WZW_plot_Ax12 |WZW_plot_Ax6.5
 combined_plot <- WZW_plot_Ax12 + plot_spacer() +WZW_plot_Ax6.5  +
   plot_layout(ncol = 3, widths = c(1, 0.05, 1))
 ggsave("ZD_Preisfluktuation.png", combined_plot, width=14, height=8, dpi=300)
+
