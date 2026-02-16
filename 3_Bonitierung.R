@@ -7,10 +7,10 @@ write_db <- TRUE
 
 channel2 <- dbConnect(RPostgres::Postgres(),
                       dbname = "2025_Masterarbeit_Ontrub_Douglasienzieldurchmesser",
-                      host = "134.76.17.104",
-                      user = "khusman1",
-                      port = "5432",
-                      password = "456")
+                      host = "",
+                      user = "",
+                      port = "",
+                      password = "")
 
 #1 Laden der Tabelle und Bildung der Traktecken
 #2 Bonitierung nach Weise
@@ -127,3 +127,4 @@ names(Dgl_Baeume_II.Ekl) <- paste0(tolower(substr(names(Dgl_Baeume_II.Ekl), 1, 1
 dbWriteTable(channel2, "Dgl_Baeume_0.Ekl", Dgl_Baeume_0.Ekl, overwrite = TRUE)
 dbWriteTable(channel2, "Dgl_Baeume_I.Ekl", Dgl_Baeume_I.Ekl, overwrite = TRUE)
 dbWriteTable(channel2, "Dgl_Baeume_II.Ekl", Dgl_Baeume_II.Ekl, overwrite = TRUE)
+
