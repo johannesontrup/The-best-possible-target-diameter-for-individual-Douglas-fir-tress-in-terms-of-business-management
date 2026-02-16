@@ -7,10 +7,10 @@ write_db <- TRUE
 
 channel2 <- dbConnect(RPostgres::Postgres(),
                       dbname = "2025_Masterarbeit_Ontrub_Douglasienzieldurchmesser",
-                      host = "134.76.17.104",
-                      user = "khusman1",
-                      port = "5432",
-                      password = "456")
+                      host = "",
+                      user = "",
+                      port = "",
+                      password = "")
 
 #1 Laden der Tabellen aus der Datenbank
 #2 Bestimmung des Alters beim Zieldurchmesser
@@ -590,4 +590,5 @@ results <- lapply(names(varianten), function(var) {
 #6.5 Ergebnisausgabe
 results_df <- bind_rows(results)
 print(results_df)
+
 
